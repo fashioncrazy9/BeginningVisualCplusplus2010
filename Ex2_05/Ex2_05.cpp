@@ -22,8 +22,11 @@ int main(){
 
 	strips_per_roll = static_cast<int>(rollLength/height);
 	perimeter = 2.0*(length + width);
+	// static_cast<type> -> cast is checked statically - when the program compiles
 	strips_reqd = static_cast<int> (perimeter/rollWidth);
 	nrolls = strips_reqd / strips_per_roll;
+
+	// to discover the type of an expression use typeid(x*y).name()
 
 	cout << endl;
 	cout << "For your room you need " << nrolls << " rolls of wallpaper." << endl;
